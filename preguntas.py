@@ -57,7 +57,7 @@ def pregunta_02():
 
         # Calcule el gradiente
         # Fórmula del gradiente = -2* sumatoria (error)
-        gradient = -2 * np.sum(np.multiply(x_poly, np.array(error)[:, np.newaxis]), axis=0)
+        gradient = -np.sum(np.multiply(x_poly, np.array(error)[:, np.newaxis]), axis=0)
 
         # Actualice los parámetros
         params = params - learning_rate * gradient
